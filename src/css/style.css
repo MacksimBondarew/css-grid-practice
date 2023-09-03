@@ -1,0 +1,30 @@
+.container {
+  width: 700px;
+  margin: 0 auto;
+  display: grid;
+  padding: 15px 15px;
+  background-color: gray;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 100px 200px 50px;
+  grid-gap: 30px;
+  color: white;
+}
+.container > * {
+  background-color: red;
+}
+
+header {
+  grid-column: 1/-1;
+}
+
+footer {
+  grid-column: 1/-1;
+}
+
+.sidebar {
+  grid-area: 2/4/4/5;
+}
+
+.main {
+  grid-area: 3/1/4/4;
+}/*# sourceMappingURL=style.css.map */
