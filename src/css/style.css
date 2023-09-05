@@ -4,8 +4,8 @@
   display: grid;
   padding: 15px 15px;
   background-color: gray;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 100px 200px 50px;
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]) [grid-col-end];
+  grid-template-rows: [header-start] 50px [header-end box-start] 100px [box-end main-start] 200px [main-end footer-start] 50px [footer-end];
   grid-gap: 30px;
   color: white;
 }
@@ -14,17 +14,17 @@
 }
 
 header {
-  grid-column: 1/-1;
+  grid-column: col-start 1/grid-col-end;
 }
 
 footer {
-  grid-column: 1/-1;
+  grid-column: col-start 1/grid-col-end;
 }
 
 .sidebar {
-  grid-area: 2/4/4/5;
+  grid-area: box-start/col-start 4/main-end/grid-col-end;
 }
 
 .main {
-  grid-area: 3/1/4/4;
+  grid-area: main-start/col-start 1/main-end/col-end 3;
 }/*# sourceMappingURL=style.css.map */
